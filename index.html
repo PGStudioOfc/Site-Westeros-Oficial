@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>As Crônicas de Westeros</title>
+  <meta name="description" content="Servidor de RPG As Crônicas de Westeros – uma experiência imersiva inspirada em fantasia medieval." />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0b0e14;
+      --bg-card: #141824;
+      --gold: #c9a44c;
+      --gold-soft: #e6cf8b;
+      --text-main: #eaeaf0;
+      --text-muted: #9aa0b4;
+      --border: rgba(201,164,76,0.25);
+    }* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+
+font-family: 'Inter', sans-serif; background: linear-gradient(to bottom, rgba(11,14,20,0.35) 0%, rgba(11,14,20,0.75) 45%, rgba(11,14,20,0.95) 100%), url('https://i.pinimg.com/originals/24/cf/3e/24cf3e7ce7a5ed9be92772b989e9418e.gif') center top / cover no-repeat, radial-gradient(1200px 600px at 50% -200px, #1b2135 0%, var(--bg-dark) 60%); background-attachment: fixed; color: var(--text-main); line-height: 1.6; }
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(11,14,20,0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: 'Cinzel', serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--gold);
+}
+
+.menu a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.menu a:hover { color: var(--gold-soft); }
+
+.hero {
+  max-width: 1200px;
+  margin: auto;
+  padding: 120px 24px 100px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 52px;
+  font-weight: 800;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  color: var(--text-muted);
+  font-size: 18px;
+}
+
+.hero .actions {
+  margin-top: 36px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 28px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #1c2236, #121628);
+  color: var(--text-main);
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(180deg, #d7b45a, #b8923a);
+  color: #1a1406;
+  border: none;
+}
+
+.btn:hover {
+
+transform: translateY(-3px) scale(1.02); box-shadow: 0 14px 40px rgba(0,0,0,0.55); }
+
+.btn:active { transform: translateY(0) scale(0.98); }
+
+.btn { position: relative; overflow: hidden; }
+
+.btn::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(255,255,255,0.25), transparent 60%); opacity: 0; transition: opacity 0.4s ease; }
+
+.btn:hover::after { opacity: 1; }
+
+section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 24px;
+}
+
+section h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 32px;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+section p {
+  color: var(--text-muted);
+  max-width: 800px;
+}
+
+.cards {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: linear-gradient(180deg, #171c2e, #101425);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 28px;
+}
+
+.card h3 {
+  font-family: 'Cinzel', serif;
+  color: var(--gold-soft);
+  margin-bottom: 10px;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  background: #0b0e14;
+  padding: 40px 24px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 40px; }
+  .menu a { margin-left: 16px; }
+}
+
+  </style>
+</head>
+<body><header>
+  <div class="nav">
+    <div class="logo">As Crônicas de Westeros</div>
+    <nav class="menu">
+      <a href="#sobre">Sobre o Servidor</a>
+      <a href="#discord">Discord</a>
+      <a href="#status">Status</a>
+      <a href="#outros">Outros Servidores</a>
+    </nav>
+  </div>
+</header><main>
+  <section class="hero">
+    <h1>As Crônicas de Westeros</h1>
+    <p>
+      Um servidor de RPG sério, imersivo e bem estruturado, focado em narrativa,
+      escolhas impactantes e construção de personagens em um mundo vivo.
+    </p>
+    <div class="actions">
+      <a href="#discord" class="btn primary">Entrar no Discord</a>
+      <a href="#sobre" class="btn">Conhecer o Servidor</a>
+    </div>
+  </section>  <section id="sobre">
+    <h2>Sobre o Servidor</h2>
+    <p>
+      As Crônicas de Westeros é um projeto feito com dedicação profissional,
+      oferecendo regras claras, lore organizada, mestres ativos e uma
+      experiência de RPG contínua e respeitosa.
+    </p>
+    <div class="cards">
+      <div class="card">
+        <h3>RPG Narrativo</h3>
+        <p>Histórias profundas, decisões com consequências reais e evolução constante do mundo.</p>
+      </div>
+      <div class="card">
+        <h3>Equipe Ativa</h3>
+        <p>Administração presente, suporte rápido e compromisso com qualidade.</p>
+      </div>
+      <div class="card">
+        <h3>Organização Profissional</h3>
+        <p>Sistemas claros, categorias bem definidas e ambiente sério para jogar.</p>
+      </div>
+    </div>
+  </section>  <section id="discord">
+    <h2>Discord</h2>
+    <p>
+      Toda a experiência do servidor acontece dentro do nosso Discord.
+      Clique no botão abaixo para entrar e começar sua jornada.
+    </p>
+    <div class="actions" style="margin-top:24px;">
+      <a href="https://discord.gg/2TsR8rrqgS" target="_blank" class="btn primary">Entrar no Discord</a>
+    </div>
+  </section>  <section id="status">
+    <h2>Status do Servidor</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Servidor</h3>
+        <p>Status: <strong>Ativo</strong><br>Funcionamento estável e contínuo.</p>
+      </div>
+      <div class="card">
+        <h3>Discord</h3>
+        <p>Servidor do Discord <strong>Online</strong> e operacional.</p>
+      </div>
+      <div class="card">
+        <h3>Atualizações</h3>
+        <p>Atualizações constantes, novas mecânicas e melhorias frequentes.</p>
+      </div>
+      <div class="card">
+        <h3>Bots</h3>
+        <p>Bots do servidor <strong>Ativos</strong> e funcionando normalmente.</p>
+      </div>
+    </div>
+  </section>  <section id="outros">
+    <h2>Outros Servidores</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>As Crônicas do Crepúsculo</h3>
+        <p>
+          Servidor parceiro com foco em uma ambientação alternativa e novas histórias,
+          mantendo o mesmo padrão de qualidade.
+        </p>
+      </div>
+    </div>
+  </section>
+</main><footer>
+  <p>© 2026 As Crônicas de Westeros • Projeto independente de RPG</p>
+</footer><script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId.length > 1) {
+        e.preventDefault();
+        document.querySelector(targetId).scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script></body>
+</html>
